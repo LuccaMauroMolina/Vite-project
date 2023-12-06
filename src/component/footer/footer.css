@@ -1,0 +1,43 @@
+footer{
+    background-color: rgb(213, 167, 81);
+}
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding-top: 20px;
+}
+
+.img-metodo{
+    height: 40px;
+    width: 90px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.footer-title{
+    padding-bottom: 15px;
+}
+
+.footer-p{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.footer-icon{
+    display: block;
+    padding-top: 15px;
+    align-items: center;
+}
+
+.metodos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+svg{
+    margin-right: 15px;
+    cursor: pointer;
+}
