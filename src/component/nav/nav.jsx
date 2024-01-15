@@ -1,7 +1,7 @@
-import './nav.css'
+import './Nav.css'
 import logo from "../../img/logo.png"
 import CartWidget from '../CartWidget/CartWidget'
-
+import { NavLink, Link } from 'react-router-dom'
 
 const Nav = () => {
     return (
@@ -9,20 +9,36 @@ const Nav = () => {
         <header>
             <nav>
             <ul className="listas">
-                <li> <a href="">Brownie</a></li>
-                <li> <a href="">Producto</a></li>
-                <li> <a href="">Destacado</a></li>
+                <li>
+                    <NavLink to={`/Categoria/Brownie`}> Brownie </NavLink>
+                </li>
+                <li>
+                    <NavLink to={`/Categoria/Producto`}> Producto </NavLink>
+                </li>
+                <li>
+                    <NavLink to={`/Categoria/Destacado`}> Destacado </NavLink>
+                </li>
             </ul>
-            <img className="logo" src={logo} alt=""/>
+            <Link>
+                <img className="logo" src={logo} alt=""/>
+            </Link>
             <div id="contador"></div>
-            <form action="">
-                <input type="text" placeholder="Buscar"/>
-            </form>
+            
             <CartWidget />
             </nav>
+            <form action="">
+                <input type="text" placeholder="Buscar" className="buscar"/>
+            </form>
         </header>
     </>
     )
 }
 
 export default Nav
+
+/*<li> <a href="">Brownie</a></li>
+                <li> <a href="">Producto</a></li>
+                <li> <a href="">Destacado</a></li>
+
+
+*/

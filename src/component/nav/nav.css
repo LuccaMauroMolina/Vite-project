@@ -12,7 +12,7 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: auto;
+
 }
 
 .listas{
@@ -39,12 +39,15 @@ ul li {
 .logo{
     width: 230px;
     height: 230px;
-    transform: translatex(-100px) ;
 }
 
 form{
     display: flex;
     justify-content: center;
+}
+
+.buscar{
+    
 }
 
 input{

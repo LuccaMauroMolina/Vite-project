@@ -1,54 +1,39 @@
+import { Link } from "react-router-dom"
 import "./Item.css"
 //import brownie from "../../img/brownie.png"
-import { useState } from "react"
-import { Productos } from "../../Asynmock"
+//import { useState } from "react"
+//import { Productos } from "../../Asynmock"
 
-function Item() {
+
+const Item = ({img, precio, nombre}) => {
     
-    const [agregar, setAgregar] = useState(0)
+    /*const [agregar, setAgregar] = useState(0)
     
-    function Agrega(){
+    function agrega(){
         if(agregar >= 0){
             setAgregar(agregar + 1)
         }
-    }
+    }*/
 
-    const listItems = Productos.map(prod => {
+
+    return(
+        <div className="tarjeta">
             <div className="cards">
                 <div className="card">
-                    <img className="card-img" src={prod.img} alt=""/>
+                    <img className="card-img" src={img} alt=""/>
                     <div className="card-back">
-                        <h2 className="card-title">{prod.nombre} </h2>
+                        <h2 className="card-title"> {nombre} </h2>
                         <div className="card-in">
-                            <span className="card-price"> {prod.precio} </span>
-                            <span className="card-buy" onClick={Agrega}>AGREGAR</span>
-                            <span>{agregar}</span>
+                            <span className="card-price"> {precio} </span>
+                            <Link to={`/Item/${nombre}`} className="card-buy">Ver Detalle</Link>
                         </div>
                     </div>
                 </div>
             </div>
-})
-    return(
-        <main>
-            <section>
-                {listItems}
-            </section>
-        </main>
+        </div>
     )
 }
 
+//<span className="card-buy" onClick={agrega}>AGREGAR</span>
+
 export default Item
-/*
-<div className="cards">
-                <div className="card">
-                    <img className="card-img" src={prod.img} alt=""/>
-                    <div className="card-back">
-                        <h2 className="card-title">{prod.nombre} </h2>
-                        <div className="card-in">
-                            <span className="card-price"> {prod.precio} </span>
-                            <span className="card-buy" onClick={Agrega}>AGREGAR</span>
-                            <span>{agregar}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>*/

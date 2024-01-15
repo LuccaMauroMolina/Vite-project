@@ -1,11 +1,22 @@
+//import React from 'react'
+import { useEffect, useState } from "react"
+import ItemList from "../ItemList/ItemList"
+import { Asynmock } from "../../Asynmock"
 
+const ItemListContainer = () => {
+    const [productos, setProductos] = useState([])
 
-const ItemListContainer = (greeting) => {
+    useEffect(() => {
+        Asynmock()
+            .then(resolve => {
+                setProductos(resolve)
+            })
+    }, [])
+
     return (
-    <>
-        <h2 style={{ textAlign: "center" }}>{greeting}</h2>
-
-    </>
+    <div>
+        <ItemList productos={productos}/>
+    </div>
     )
 }
 
