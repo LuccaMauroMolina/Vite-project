@@ -13,3 +13,21 @@ export const Asynmock = () => {
         }, 100)
     })
 }
+
+export const getProductos = () => {
+    return new Promise(resolve => {
+        setTimeout( ()=> {
+            resolve(Productos)
+        }, 100) 
+    })
+}
+
+
+export const getProductosPorCategoria = (idCategoria) => {
+    return new Promise( resolve => {
+        setTimeout( ()=> {
+            const productosCategoria = Productos.filter(prod => prod.idCat === idCategoria);
+            resolve(productosCategoria);
+        },100)
+    })
+}
