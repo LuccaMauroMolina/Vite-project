@@ -1,13 +1,13 @@
 //import React from 'react'
 import { useEffect, useState } from "react"
 import ItemList from "../ItemList/ItemList"
-import { Asynmock } from "../../Asynmock"
+import { AsynMock } from "../../Asynmock"
 
 const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
 
     useEffect(() => {
-        Asynmock()
+        AsynMock()
             .then(resolve => {
                 setProductos(resolve)
             })
