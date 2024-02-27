@@ -10,24 +10,22 @@ import ItemDetailContainer from './component/ItemDetailContainer/ItemDetailConta
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  
+  
+<React.StrictMode>
+    <BrowserRouter>
+          <Nav/>
+            <Routes>
+              <Route path="/" element={<ItemListContainer />} />
+              <Route path="/categoria/:IdCategoria" element={<ItemListContainer />} />
+              <Route path="/item/:idItem" element={<ItemDetailContainer />} />
+              <Route path="*" element={<h2>Sitio en Construcción</h2>} />
+            </Routes>
+        <Footer/>
+    </BrowserRouter>
+</React.StrictMode>
 
 
-<BrowserRouter>
-
-<Nav/>
-<Routes>
-<Route path="/" element={<ItemListContainer />} />
-            <Route path="/categoria/:IdCategoria" element={<ItemListContainer />} />
-            <Route path="/item/:idItem" element={<ItemDetailContainer />} />
-            <Route path="*" element={<h2>Sitio en Construcción</h2>} />
-</Routes>
-<ItemListContainer/>
-<Footer/>
-</BrowserRouter>
-
-
-  </React.StrictMode>
 )
 
 /*<Routes>

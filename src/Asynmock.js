@@ -75,6 +75,9 @@ export const getItem = (id) => {
 }
 
 
+
+
+
 export const getCategoria = (idCategoria) => {
     return new Promise (resolve => {
         setTimeout(() => {

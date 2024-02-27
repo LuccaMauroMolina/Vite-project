@@ -1,5 +1,5 @@
 import { IconShoppingBag } from '@tabler/icons-react';
-
+/*
 
 const CartWidget = () => {
     return (
@@ -7,4 +7,34 @@ const CartWidget = () => {
     )
 }
 
+export default CartWidget*/
+
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from '../CartContext/CartContext'
+const CartWidget = () => {
+
+    const { carrito } = useContext(Context);
+
+    const totalCant = carrito.reduce((total, producto) => total + producto.cantidad, 0);
+
+    return(
+        <Link to={'/cart'}>
+            <IconShoppingBag />
+            {
+                totalCant
+            }
+        </Link>
+    )
+
+    /*return (
+    <>
+    <div className="carrito">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"/><circle cx="10.5" cy="19.5" r="1.5"/><circle cx="17.5" cy="19.5" r="1.5"/></svg>
+        <p className="contador">1</p>
+    </div>
+    </>
+    )*/
+    }
+    
 export default CartWidget

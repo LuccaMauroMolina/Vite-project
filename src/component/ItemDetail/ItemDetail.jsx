@@ -43,9 +43,8 @@ export default ItemDetail*/
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/Count'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Context } from '../CartContext/CartContext'
-import { useContext } from 'react'
 
 const ItemDetail = ({ id, nombre, precio, img, stock }) => {
 
@@ -78,9 +77,10 @@ return (
         <img src={img} alt={nombre} />
         <div className='contador'>
 
-    {
+        {
         agregarCantidad > 0 ? (<Link to="/cart"> Terminar compra </Link>) : (<ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
-    }
+        }
+        
     </div>
     </div>
     </div>
