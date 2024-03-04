@@ -17,8 +17,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Nav/>
             <Routes>
               <Route path="/" element={<ItemListContainer />} />
-              <Route path="/categoria/:IdCategoria" element={<ItemListContainer />} />
-              <Route path="/item/:idItem" element={<ItemDetailContainer />} />
+              <Route path="/item/:idItem" element={<ItemListContainer />} />
+              <Route path="/categoria/:IdCategoria" element={<ItemDetailContainer />} />
               <Route path="*" element={<h2>Sitio en Construcción</h2>} />
             </Routes>
         <Footer/>
@@ -32,7 +32,22 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <Route path='/' element={<ItemListContainer/>}/>
   <Route path='/categoria/:nombreCategoria' element={<ItemListContainer/>}/>
   <Route path='/item/:nombreItem' element={<ItemListContainer/>}/>
-</Routes>*/
+</Routes>
+
+<BrowserRouter>
+          <Nav/>
+            <Routes>
+              <Route path="/" element={<ItemListContainer />} />
+              <Route path="/categoria/:IdCategoria" element={<ItemListContainer />} />
+              <Route path="/item/:idItem" element={<ItemDetailContainer />} />
+              <Route path="*" element={<h2>Sitio en Construcción</h2>} />
+            </Routes>
+        <Footer/>
+    </BrowserRouter>
+
+
+
+*/
 
 
 /* 

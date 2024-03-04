@@ -3,30 +3,30 @@
 import { useEffect, useState } from 'react';
 import ItemList from "../ItemList/ItemList";
 import { useParams } from 'react-router-dom';
-import { AsynMock, getItem } from '../../Asynmock';
+import { AsynMock, getCategoria } from '../../Asynmock';
 
 const ItemDetailContainer = ({ greeting }) => {
   const [producto, setProductos] = useState([]);
   const { idItem } = useParams();
 
+
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        let data;
-        if (idItem) {
-          //data = await getItem(idItem);
-          return getItem(idItem)
-        } else {
-          //data = await AsynMock();
-          setProductos(data);
-          return AsynMock()
-        }
-      } catch (error) {
-        console.log(error);
+    function Prod(){
+      if (idItem){
+        return getCategoria (idItem)
+      }else {
+        return AsynMock()
       }
-    };
-    fetchData();
-  }, [idItem]);
+    }
+
+
+      Prod()
+        .then(res => setProductos(res))
+        .catch(error => console.log(error))
+  }, [ idItem])
+
+
+
 
   console.log(producto)
 

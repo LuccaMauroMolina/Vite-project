@@ -1,20 +1,23 @@
-/*import Item from '../Item/Item'
+import Item from "../Item/Item"
+import './ItemList.css'
 
 const ItemList = ({productos}) => {
     return (
-        <div className="tarjeta">
-        {
-            productos.map(prod => {
-                return <Item key={prod.id} {...prod} />
-            })
-        }
-        </div>
+    
+    <div className="tarjeta">
+    {
+        productos.map(prod  => {
+            return <Item key={prod.id}  {...prod} />
+        })
+    }
 
+
+    </div>
     )
 }
 
-export default ItemList*/
-
+export default ItemList
+/*
 import Item from '../Item/Item';
 
 const ItemList = ({ productos }) => {
@@ -28,3 +31,4 @@ const ItemList = ({ productos }) => {
 };
 
 export default ItemList;
+*/
