@@ -1,49 +1,32 @@
-/*
-//import reactLogo from './assets/react.svg'//import viteLogo from '/vite.svg'
-import { useEffect, useRef, useState } from 'react'
-import './App.css'
+import ItemListContainer from "./component/ItemListContainer/ItemListContainer"
+import ItemDetailContainer from "./component/ItemDetailContainer/ItemDetailContainer"
+import NavBar from "./component/NavBar/NavBar"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Nosotros from "./component/Nosotros/Nosotros"
 
-
-function App() {
-  const [valor, actual] = useState(0)
-
-  function s(){
-    if(valor >= 0){
-      actual(valor + 1)
-    }
-  }
-  function r(){
-    if(valor <= 0){
-      actual(valor - 1)
-    }
-  }
-
-
-  const nombre = useRef("lucca")
-
-  const cam = () => {
-    console.log(nombre.current)
-  }
-
-  useEffect(() => {
-    document.title = 'Nuevo título';
-  }, [])
-
+const App = () => {
   return (
-    <>
-      <button onClick={r}>-</button>
-      <p>{valor}</p>
-      <button onClick={s}>+</button>
-      <div>
-        <button ref={cam}>click</button>
-      </div>
-    </>
-  )
-  
+    <div>
+      <BrowserRouter>
+        <NavBar/>
 
+        <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/item/:id" element={<ItemDetailContainer />}/>
+            <Route path="/productos" element={<ItemListContainer />} />
+            <Route path="/productos/:categoria" element={<ItemListContainer />} />
+            <Route path="/nosotros" element={<Nosotros />}/>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  )
 }
 
+export default App
 
-export default App*/
-
-
+/*
+<Route path="/" element={<ItemListContainer/>}/>
+            <Route path="/item/:id" element={<ItemDetailContainer />}/>
+            <Route path="/productos" element={<ItemListContainer/>}/>
+            <Route path="/productos/:categoria" element={<ItemListContainer/>}/>
+            <Route path="/nosotros" element={<Nosotros />}/>*/

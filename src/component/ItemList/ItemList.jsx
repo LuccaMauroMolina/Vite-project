@@ -1,34 +1,22 @@
+//import React from 'react'
+//import { productos } from "../../Asynmock"
 import Item from "../Item/Item"
-import './ItemList.css'
+
 
 const ItemList = ({productos}) => {
     return (
-    
-    <div className="tarjeta">
-    {
-        productos.map(prod  => {
-            return <Item key={prod.id}  {...prod} />
-        })
-    }
-
-
+    <div>
+        <h1>Productos</h1>
+        {
+            productos.length > 0 &&
+            productos.map((producto) => {
+                return(
+                    <Item key={producto.id} producto={producto}/>
+                )
+            })
+        }
     </div>
     )
 }
 
 export default ItemList
-/*
-import Item from '../Item/Item';
-
-const ItemList = ({ productos }) => {
-  return (
-    <div className="tarjeta">
-    {productos.map(prod => (
-        <Item key={prod.id} {...prod} />
-    ))}
-    </div>
-  );
-};
-
-export default ItemList;
-*/

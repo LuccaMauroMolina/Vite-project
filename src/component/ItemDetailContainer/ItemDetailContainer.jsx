@@ -1,64 +1,25 @@
+import { useEffect, useState } from "react"
+import { pedirItemPorId } from "../../../Helpers/pedirDatos"
+import ItemDetail from "../ItemDetail/ItemDetail"
+import { useParams } from "react-router-dom"
 
 
-import { useEffect, useState } from 'react';
-import ItemList from "../ItemList/ItemList";
-import { useParams } from 'react-router-dom';
-import { AsynMock, getCategoria } from '../../Asynmock';
+const ItemDetailContainer = () => {
+    const [item, setItem] = useState(null)
+    const id = useParams().id
 
-const ItemDetailContainer = ({ greeting }) => {
-  const [producto, setProductos] = useState([]);
-  const { idItem } = useParams();
+    useEffect(() => {
+        pedirItemPorId(Number(id))
+            .then((res) => {
+                setItem(res)
+            })
+    }, [id])
 
+    return (
+        <div>
+            {item && <ItemDetail item={item}/> }
+        </div>
+    )
+}
 
-  useEffect(() => {
-    function Prod(){
-      if (idItem){
-        return getCategoria (idItem)
-      }else {
-        return AsynMock()
-      }
-    }
-
-
-      Prod()
-        .then(res => setProductos(res))
-        .catch(error => console.log(error))
-  }, [ idItem])
-
-
-
-
-  console.log(producto)
-
-  return (
-    <div>
-      <h1 className="titulo">{greeting}</h1>
-      <ItemList productos={producto} />
-    </div>
-  );
-};
-
-export default ItemDetailContainer;
-
-
-
-
-//USEEFFECT
-    /*useEffect(() => {
-    const fetchData = async () => {
-      try {
-        let data;
-        if (idItem) {
-          //data = await getItem(idItem);
-          return getItem(idItem)
-        } else {
-          //data = await AsynMock();
-          setProductos(data);
-          return AsynMock()
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchData();
-  }, [idItem]);*/
+export default ItemDetailContainer
