@@ -1,4 +1,5 @@
-import { AsynMock } from "../data/Asynmock";
+//import { AsynMock } from "../data/Asynmock";
+import { AsynMock } from "../Data/Asynmock";
 
 export const pedirDatos = () => {
     return new Promise((resolve) => {
