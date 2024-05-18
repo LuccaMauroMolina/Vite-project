@@ -1,17 +1,17 @@
-//import { AsynMock } from "../data/Asynmock";
-import { AsynMock } from "../Data/data";
+import data from "../Data/data.json"
+
 
 export const pedirDatos = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(AsynMock)
+            resolve(data)
         }, 500)
     })
 }
 
 export const pedirItemPorId = (id) => {
     return new Promise((resolve, reject) => {
-        const item = AsynMock.find((el) => el.id === id)
+        const item = data.find((el) => el.id === id)
 
         if(item){
             resolve(item)

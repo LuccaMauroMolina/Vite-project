@@ -1,0 +1,30 @@
+[
+    {"nombre": "Brownie comun",
+    "id":1 ,
+    "precio": 800,
+    "img": "../imgReact/brownie.png",
+    "categoria":"Brownie" ,
+    "descripcion": "este es uno de los mejores brownies" 
+
+    },
+    {"nombre": "maicena de leche",
+    "id":2,
+    "precio": 2500,
+    "img":"../imgReact/maicena.png",
+    "categoria":"Tortas" ,
+    "descripcion": "este es uno de los mejores brownies" },
+
+    {"nombre": "Brownie chips",
+    "id":3, 
+    "precio": 700,
+    "img":"../imgReact/brownie.png",
+    "categoria":"Brownie" ,
+    "descripcion": "este es uno de los mejores brownies" },
+
+    {"nombre": "maicena de dulce de leche",
+    "id":4, 
+    "precio": 1200,
+    "img":"../imgReact/maicena.png",
+    "categoria":"Tortas"  ,
+    "descripcion": "este es uno de los mejores brownies" }
+]
