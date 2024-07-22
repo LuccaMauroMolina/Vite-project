@@ -6,6 +6,7 @@
 
 header{
     background-color: rgb(213, 167, 81);
+    margin-bottom: 25px;
 }
 
 nav{
@@ -36,7 +37,7 @@ ul li {
     list-style: none;
 }
 
-.logo{
+.img-logo{
     width: 230px;
     height: 230px;
 }
@@ -44,10 +45,6 @@ ul li {
 form{
     display: flex;
     justify-content: center;
-}
-
-.img-logo{
-    width: 100px;
 }
 
 input{
@@ -58,6 +55,14 @@ input{
     margin-bottom: 1.3rem;
 }
 
+li{
+    list-style: none;
+    padding-left: 15px;
+}
+
+.listas-nav{
+    display: flex;
+}
 
 /*export const pedirProd = () => {
     return new Promise((resolve) => {

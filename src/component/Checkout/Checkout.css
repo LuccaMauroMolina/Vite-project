@@ -1,0 +1,27 @@
+.checkout{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.btn{
+    width: 60px;
+    height: 40px;
+    background-color: rgb(213, 167, 81);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:width 0.5s ease, height 0.5s ease;
+}
+
+
+.btn:hover{
+    color: white;
+    width: 70px;
+    height: 50px;
+}
+
+input{
+    border: 1px solid black;
+    border-radius: 4px;
+}

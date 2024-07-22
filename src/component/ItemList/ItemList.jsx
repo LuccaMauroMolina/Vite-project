@@ -1,12 +1,14 @@
 //import React from 'react'
 //import { productos } from "../../Asynmock"
 import Item from "../Item/Item"
+import "../ItemList/ItemList.css"
 
 
 const ItemList = ({productos}) => {
     return (
-    <div>
+    <>
         <h1>Productos</h1>
+    <div className="cards">
         {
             productos.length > 0 &&
             productos.map((producto) => {
@@ -15,7 +17,8 @@ const ItemList = ({productos}) => {
                 )
             })
         }
-    </div>
+        </div>
+        </>
     )
 }
 

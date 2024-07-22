@@ -1,0 +1,62 @@
+img{
+    width: 300px;
+    height: 300px;
+}
+
+
+
+h3{
+    text-align: center;
+    font-family: monospace;
+}
+
+.card-detail {
+    display: flex;
+    justify-content: center; /* Esto centra el contenido horizontalmente */
+    border: 1px solid rgb(229, 229, 229);
+    border-radius: 8px;
+    box-shadow: 1px 2px 3px rgb(229, 229, 229);
+    max-width: 1000px;
+}
+
+.cardsss {
+    display: flex;
+    align-items: flex-start; /* Esto alinea los elementos verticalmente en la parte superior */
+}
+
+.left-content {
+    margin-right: 20px; /* Espacio entre la imagen/título y el contenido derecho */
+    margin-top: 25px;
+}
+
+.right-content {
+    flex-grow: 1; /* Esto permite que el contenido derecho ocupe el espacio restante */
+    margin-top: 25px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea el contenido a la izquierda */
+    justify-content: space-between; /* Separa los elementos verticalmente */
+    height: 100%; /* Asegura que ocupe todo el espacio vertical disponible */
+}
+
+
+p{
+    padding-bottom: 25px;
+}
+
+.detail-desc{
+    font-size: larger;
+    font-weight: 900;
+}
+
+.detail-precio{
+    font-size: large;
+    font-weight: 500;
+}
+
+.detail-id{
+    
+}

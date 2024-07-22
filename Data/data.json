@@ -3,28 +3,34 @@
     "id":1 ,
     "precio": 800,
     "img": "../imgReact/brownie.png",
-    "categoria":"Brownie" ,
-    "descripcion": "este es uno de los mejores brownies" 
-
+    "categoria":"brownie" ,
+    "descripcion": "este es uno de los brownies comunes" ,
+    "stock": 10
     },
     {"nombre": "maicena de leche",
     "id":2,
     "precio": 2500,
     "img":"../imgReact/maicena.png",
-    "categoria":"Tortas" ,
-    "descripcion": "este es uno de los mejores brownies" },
+    "categoria":"tortas" ,
+    "descripcion": "este es uno de las mejores maicena que tenemos",
+    "stock": 152
+    },
 
     {"nombre": "Brownie chips",
     "id":3, 
     "precio": 700,
     "img":"../imgReact/brownie.png",
-    "categoria":"Brownie" ,
-    "descripcion": "este es uno de los mejores brownies" },
+    "categoria":"brownie" ,
+    "descripcion": "este es uno de los brownies con chips de chocolate", 
+    "stock":47
+    },
 
     {"nombre": "maicena de dulce de leche",
     "id":4, 
     "precio": 1200,
     "img":"../imgReact/maicena.png",
-    "categoria":"Tortas"  ,
-    "descripcion": "este es uno de los mejores brownies" }
+    "categoria":"tortas"  ,
+    "descripcion": "este es uno de las maicenas mas pedidas de la tienda",
+    "stock":222
+    }
 ]

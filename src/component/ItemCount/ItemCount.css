@@ -1,0 +1,43 @@
+.contador{
+    display: flex;
+}
+
+p{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.mas-menos{
+    width: 25px;
+    height: 25px;
+    background-color: rgb(213, 167, 81);
+    cursor: pointer;
+    border: none;
+    font-size: medium;
+    border-radius: 25px;
+}
+
+.agregar{
+    background-color: rgb(118, 0, 0);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 25px;
+    border: 0.5px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    width: 80px;
+    height: 30px;
+    transition: width 0.5s ease, height 0.5s ease, color 1s ease-in-out;
+}
+
+.agregar:hover{
+    width: 90px;
+    height: 40px;
+    color: rgb(213, 167, 81);
+}
+
+.cont{
+    font-weight: 600;
+    font-size: medium;
+}
